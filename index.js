@@ -145,16 +145,18 @@ Kon = await getBuffer(`https://hardianto.xyz/api/welcome3?profile=${encodeURICom
 Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/8bbe8a7de5c351dfcb077.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
                 if (anu.action == 'add') {
                     GojoMdNx.sendMessage(anu.id, { image: Kon, contextInfo: { mentionedJid: [num] }, caption: `
-⭐✑ هلا👋 @${num.split("@")[0]},
+⭐✑ *مرحباً بكـ/ــي ضمن عائلتنا المتواضعه يشرفنا وجـدكـ/ـي معنا و نـتمـنى لـكـ/ـي ان تقضيـ/ـن وقتاً ممتع معنا 💜✨* @${num.split("@")[0]},
 ⭐✑ نورت جروبنا ${metadata.subject}
 
 ⭐✑ الوصف : ${metadata.desc}
 
-⭐✑ اتمنى ان تستمتع معنا 😍✨!!`} )
+⭐✑ نتمنى لك قضاء وقت ممتع معنا!!`} )
                 } else if (anu.action == 'remove') {
                     GojoMdNx.sendMessage(anu.id, { image: Tol, contextInfo: { mentionedJid: [num] }, caption: `⭐✑ @${num.split("@")[0]} غادر ${metadata.subject}
 
-⭐✑ تطلع يجي غيرك 😌✨` })
+⭐✑ *لن نقول وداعاً بل ستبقى الذكرى وصور المحبة شامخة في الذاكرة مع الأمل بالقاء 🤍😢✨*
+
+*بس تطلع يجي الف غيرك 🌚*` })
                 }
             }
         } catch (err) {
